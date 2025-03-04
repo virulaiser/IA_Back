@@ -17,7 +17,7 @@ app.post("/api/gemini", async (req, res) => {
 
   try {
     const response = await axios.post(
-      process.env.EMINI_URL +
+      process.env.GEMINI_URL +
         apiKey,
       {
         contents: [
