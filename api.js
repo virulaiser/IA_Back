@@ -8,14 +8,16 @@ const app = express();
 app.use(cors()); // Utiliza cors middleware
 
 app.use(bodyParser.json());
-
+app.get("/", (req, res) => {
+  res.send("API ON");
+});
 app.post("/api/gemini", async (req, res) => {
   const { message } = req.body;
   const apiKey = process.env.API_KEY; // Reemplaza con tu clave de API
 
   try {
     const response = await axios.post(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" +
+      process.env.EMINI_URL +
         apiKey,
       {
         contents: [
@@ -32,7 +34,7 @@ app.post("/api/gemini", async (req, res) => {
   }
 });
 
-const port = 5000;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
 });
