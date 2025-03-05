@@ -1,7 +1,7 @@
 {
   "name": "api_ia",
   "version": "1.0.0",
-  "main": "api.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "node api.js",
