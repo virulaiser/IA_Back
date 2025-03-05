@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.post("/api/gemini", async (req, res) => {
   const { message } = req.body;
-  const apiKey = process.env.API_KEY; // Reemplaza con tu clave de API
+  const apiKey = "AIzaSyDH5dFWe10bbyQc13_igBKSp-432EPyIzg"; // Reemplaza con tu clave de API
 
   try {
     const response = await axios.post(
