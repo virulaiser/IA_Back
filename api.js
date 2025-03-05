@@ -5,8 +5,12 @@ import cors from "cors"; // Importa cors
 import "dotenv/config";
 const app = express();
 
-app.use(cors()); // Utiliza cors middleware
 
+
+
+
+app.use(cors()); // Utiliza cors middleware
+app.use(express.json());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
