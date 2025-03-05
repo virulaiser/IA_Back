@@ -2,18 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "api.js",
+      "src": "api_ia/api.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/gemini",
-      "dest": "api.js"
+      "dest": "/api/gemini"
     },
     {
       "src": "/",
-      "dest": "api.js"
+      "dest": "/"
     }
   ]
 }
